@@ -15,6 +15,11 @@
   font-weight: bold;
 }
 
+h2 {
+  font-size: 12px;
+  font-weight: normal;
+}
+
 nav {
   height: 70px;
   display: flex;
