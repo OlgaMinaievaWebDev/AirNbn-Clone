@@ -1,25 +1,30 @@
-import './App.css'
-import Navbar from './Navbar'
-import Hero from './Hero'
-import Card from './Card'
+import "./App.css";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import Card from "./Card";
+import data from "./data";
 
-function App() {
-  
+export default function App() {
+  const cards = data.map((item) => {
+    return (
+      // eslint-disable-next-line react/jsx-key
+      <Card
+        key ={item.id}
+        img={item.coverImg}
+        rating={item.stats.rating}
+        reviewCount={item.stats.reviewCount}
+        location={item.location}
+        title={item.title}
+        price={item.price}
+      />
+    );
+  });
 
   return (
     <div>
       <Navbar />
       <Hero />
-      <Card
-        img="./assets/katie-zaferes.png"
-        rating="5.0"
-        reviewCount={6}
-        country="Canada"
-        title="Life Lessons with Katie Zaferes"
-        price = {136}
-      />
+      <section className="cards-list">{cards}</section>
     </div>
   );
 }
-
-export default App

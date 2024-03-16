@@ -1,4 +1,4 @@
-import image from './assets/photo-grid.png'
+import image from '../public/images/photo-grid.png'
 
 
 export default function Hero() {
