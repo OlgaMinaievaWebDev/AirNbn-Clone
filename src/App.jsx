@@ -10,13 +10,7 @@ export default function App() {
       // eslint-disable-next-line react/jsx-key
       <Card
         key ={item.id}
-        img={item.coverImg}
-        rating={item.stats.rating}
-        reviewCount={item.stats.reviewCount}
-        location={item.location}
-        title={item.title}
-        price={item.price}
-        openSpots ={item.openSpots}
+        {...item}
       />
     );
   });
